@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      const charList = [
+        "Анатолий",
+        "Раксаэдалис",
+        "Эйер",
+        "Алаикан",
+        "Астория",
+        "Айвори",
+        "Бриар",
+        "Археос",
+        "Сайк",
+        "Док",
+        "Терхо",
+        "Луи",
+      ];
+      const actList = [
+        "Ненавидит",
+        "Обожает",
+        "Хочет уничтожить",
+        "Потерял",
+        " Молится на",
+        " Не спит по ночам из-за",
+        " Враждует с",
+        " Хочет заполучить",
+        "Боится",
+        " Не воспринимает всерьёз",
+        " Устал от",
+        " Думает только о",
+      ];
+
+      const objectList = [
+        "Другом члене свиты (д12)",
+        "Хаос",
+        "Нижняя палуба",
+        "Император",
+        "Эльдары",
+        "Бунт",
+        "Ересь",
+        "Комердинер",
+        "Экклизархия",
+        "Инквизиция",
+        "Тзинч",
+        "Наркотики",
+        "701",
+        "Нургл",
+        "Сланеш",
+        "Жена Толяна",
+        "Орки",
+      ];
+      function randEl(ar) {
+        return ar[Math.floor(Math.random() * ar.length)];
+      }
+
+      function randObj(ar) {
+        let k = Math.floor(Math.random() * ar.length);
+        if (k == 0) {
+          return randEl(charList);
+        }
+        return ar[k];
+      }
+
+      $(document).ready(function () {
+        $("button").click(function () {
+          for (let i = 0; i < 101; i++) {
+            let itog =
+              "<p>" +
+              i +
+              " " +
+              randEl(charList) +
+              " " +
+              randEl(actList) +
+              " " +
+              randObj(objectList) +
+              "</p>";
+            $(".char").append(itog);
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p class="char"></p>
+
+    <button>Click me</button>
+  </body>
+</html>
