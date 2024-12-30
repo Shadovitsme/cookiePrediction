@@ -3,6 +3,19 @@
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <style>
+      .bellota-regular-italic {
+        font-family: "Bellota", serif;
+        font-weight: 400;
+        font-style: italic;
+      }
+    </style>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bellota:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
     <script>
       const charList = [
         "Если по ночам вас мучает совесть, попробуйте спать днем",
@@ -66,39 +79,39 @@
       });
     </script>
   </head>
-  <body class="flex w-screen h-screen">
+  <body class="flex w-screen h-screen px-[60px]">
     <div class="my-auto mx-auto relative">
       <div class="top-0 w-full h-[100px]">
-        <p class="char mx-auto"></p>
+        <p
+          class="char mx-auto text-center bellota-regular-italic text-[30px]"
+        ></p>
       </div>
       <div class="bottom-0 w-full">
         <button
-        class="group p-5 cursor-pointer relative text-xl font-normal border-0 flex items-center justify-center bg-transparent text-red-500 h-auto w-[170px] overflow-hidden transition-all duration-100 mx-auto"
-      >
-        <span
-          class="group-hover:w-full absolute left-0 h-full w-5 border-y border-l border-red-500 transition-all duration-500"
+          class="group p-5 cursor-pointer relative text-xl font-normal border-0 flex items-center justify-center bg-transparent text-red-500 h-auto w-[170px] overflow-hidden transition-all duration-100 mx-auto"
         >
-        </span>
+          <span
+            class="group-hover:w-full absolute left-0 h-full w-5 border-y border-l border-red-500 transition-all duration-500"
+          >
+          </span>
 
-        <p
-          class="group-hover:opacity-0 group-hover:translate-x-[-100%] absolute translate-x-0 transition-all duration-200"
-        >
-          Печенька?
-        </p>
+          <p
+            class="group-hover:opacity-0 group-hover:translate-x-[-100%] absolute translate-x-0 transition-all duration-200"
+          >
+            Печенька?
+          </p>
 
-        <span
-          class="group-hover:translate-x-0 group-hover:opacity-100 absolute translate-x-full opacity-0 transition-all duration-200"
-          >Съесть печеньку!
-        </span>
+          <span
+            class="group-hover:translate-x-0 group-hover:opacity-100 absolute translate-x-full opacity-0 transition-all duration-200"
+            >Съесть печеньку!
+          </span>
 
-        <span
-          class="group-hover:w-full absolute right-0 h-full w-5 border-y border-r border-red-500 transition-all duration-500"
-        >
-        </span>
-      </button>
+          <span
+            class="group-hover:w-full absolute right-0 h-full w-5 border-y border-r border-red-500 transition-all duration-500"
+          >
+          </span>
+        </button>
       </div>
-
-
     </div>
   </body>
 </html>
