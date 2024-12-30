@@ -2,6 +2,7 @@
 <html>
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
       const charList = [
         "Если по ночам вас мучает совесть, попробуйте спать днем",
@@ -65,9 +66,39 @@
       });
     </script>
   </head>
-  <body>
-    <p class="char"></p>
+  <body class="flex w-screen h-screen">
+    <div class="my-auto mx-auto relative">
+      <div class="top-0 w-full h-[100px]">
+        <p class="char mx-auto"></p>
+      </div>
+      <div class="bottom-0 w-full">
+        <button
+        class="group p-5 cursor-pointer relative text-xl font-normal border-0 flex items-center justify-center bg-transparent text-red-500 h-auto w-[170px] overflow-hidden transition-all duration-100 mx-auto"
+      >
+        <span
+          class="group-hover:w-full absolute left-0 h-full w-5 border-y border-l border-red-500 transition-all duration-500"
+        >
+        </span>
 
-    <button>Click me</button>
+        <p
+          class="group-hover:opacity-0 group-hover:translate-x-[-100%] absolute translate-x-0 transition-all duration-200"
+        >
+          Печенька?
+        </p>
+
+        <span
+          class="group-hover:translate-x-0 group-hover:opacity-100 absolute translate-x-full opacity-0 transition-all duration-200"
+          >Съесть печеньку!
+        </span>
+
+        <span
+          class="group-hover:w-full absolute right-0 h-full w-5 border-y border-r border-red-500 transition-all duration-500"
+        >
+        </span>
+      </button>
+      </div>
+
+
+    </div>
   </body>
 </html>
